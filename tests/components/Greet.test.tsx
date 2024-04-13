@@ -1,7 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import { it, expect, describe } from 'vitest'
 import Greet from '../../src/components/Greet'
-import '@testing-library/jest-dom/vitest'
 
 describe('Greet', () => {
     it('should render Hello with name when the name is provided', () => {
@@ -19,6 +17,6 @@ describe('Greet', () => {
         const button = screen.getByRole('button')
 
         expect(button).toBeInTheDocument()
-        expect(button).toHaveTextContent(/login /i)
+        expect(button).toHaveTextContent(/login/i)
     })
 })
